@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./timeline-item.component.scss']
 })
 export class TimelineItemComponent implements OnInit {
+  title = "Vuur bij Landenstraat verspreidt richting school";
+  subtext = "Bericht geverifieerd door 22 gebruikers";
 
   constructor() { }
 
