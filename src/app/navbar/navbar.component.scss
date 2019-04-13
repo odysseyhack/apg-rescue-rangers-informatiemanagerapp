@@ -1,0 +1,32 @@
+
+.hoofdcat {
+    background-color: rgb(214, 214, 214);
+    color: #333;
+}
+.navbar {
+    padding-left: 0 !important;
+}
+li {
+    padding-left: 2em;
+    color: #999;
+    font-weight: 600;
+}
+.black {
+    background-color: #333;
+}
+.active {
+    background-color: #9fbc76;
+    color: #333;
+}
+ul .horline:after {
+    content: "";
+    margin-top: 1em;
+    display: block;
+    height: 1px;
+    width: 100%;
+    background: #333;
+}
+.specsec {
+    margin-top: 0.5em;
+    color: #333 !important;
+}
