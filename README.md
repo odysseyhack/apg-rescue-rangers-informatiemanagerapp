@@ -1,3 +1,5 @@
+[![BCH compliance](https://bettercodehub.com/edge/badge/odysseyhack/apg-rescue-rangers-informatiemanagerapp?branch=master&token=50c3f904b5a541872f8cea4667fdd981a00e5c61)](https://bettercodehub.com/)
+
 # Odyssey
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.7.
