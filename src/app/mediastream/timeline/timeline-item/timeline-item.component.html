@@ -1,12 +1,14 @@
-<div class="row">
-  <div class="col-lg-1 offset-1 mt-2">
+<div class="row" *ngFor="let i of incomingMessages; last as isLast">
+  <div class="col-lg-1 offset-1 mt-4">
     <div class="ball"></div>
-    <div class="vline"></div>
+    <div class="vline" *ngIf="!isLast"></div>
   </div>
   <div class="col-lg-10">
     <div class="title">
-        <h2>{{ title }}</h2>
-        <p class="offset-1">{{ subtext }}</p>
+        <p class="timestamp">{{ i.timestamp }} </p>
+        <h2>{{ i.title }}</h2>
+        <p class="offset-1">{{ i.message }}</p>
+        <br>
     </div>    
   </div>
 </div>
