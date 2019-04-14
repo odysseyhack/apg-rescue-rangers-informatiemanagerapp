@@ -13,6 +13,8 @@ import { GeomapComponent } from './mediastream/geomap/geomap.component';
 import { SummaryComponent } from './mediastream/summary/summary.component';
 import { TimelineComponent } from './mediastream/timeline/timeline.component';
 import { TimelineItemComponent } from './mediastream/timeline/timeline-item/timeline-item.component';
+import { HttpClientModule }    from '@angular/common/http';
+import { SocialmediaComponent } from './mediastream/socialmedia/socialmedia.component';
 
 @NgModule({
   declarations: [
@@ -23,14 +25,16 @@ import { TimelineItemComponent } from './mediastream/timeline/timeline-item/time
     GeomapComponent,
     SummaryComponent,
     TimelineComponent,
-    TimelineItemComponent
+    TimelineItemComponent,
+    SocialmediaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyAR6CdTE5J3xwKdCNfjXNe9NdcqEegovgw'
-    })
+    }),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

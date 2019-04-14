@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Incident } from '../../model/eventdata';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { WeatherService } from 'src/app/service/weather.service';
+import { zip } from 'rxjs';
 
 @Component({
   selector: 'app-summary',
@@ -16,9 +19,28 @@ export class SummaryComponent implements OnInit {
   {value: "N/NE", link: '../../../assets/img/direction.png'},
   {value: "69%", link: '../../../assets/img/moisture.png'}];
 
-  constructor() { }
+  constructor(private weatherService: WeatherService) { }
+  weather;
+  texts;
+  images;
 
   ngOnInit() {
+    console.log("otehuoeu");
+
+    // this.weatherService.getWeatherData().subscribe(data => {
+    //   this.weather = JSON.parse(JSON.stringify(data));
+    //   console.log(this.weather.Key);
+    // });
+
+    this.weatherService.getTopicModels().subscribe(data => {
+      this.texts = JSON.parse(JSON.stringify(data));
+      console.log(this.texts[0]);
+    })
+    // this.weatherService.getWeatherData().subscribe(
+    //   data => { this.weather = data},
+    //   err => console.error(err),
+    //   () => console.log('done loading data')
+    // );
 
   }
 
