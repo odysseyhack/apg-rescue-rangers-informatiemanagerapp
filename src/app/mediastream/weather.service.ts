@@ -20,8 +20,8 @@ export class WeatherService {
   getTopicModels() {
     return this.http.get('http://127.0.0.1:5003/topicmodels');
   }
-  // getImages() {
-  //   return this.http.get('http://127.0.0.1:5003/topicmodels');
-  // }
+  getImages() {
+    return this.http.get('http://127.0.0.1:5003/images');
+  }
 
 }

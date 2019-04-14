@@ -15,6 +15,7 @@ import { TimelineComponent } from './mediastream/timeline/timeline.component';
 import { TimelineItemComponent } from './mediastream/timeline/timeline-item/timeline-item.component';
 import { HttpClientModule }    from '@angular/common/http';
 import { SocialmediaComponent } from './mediastream/socialmedia/socialmedia.component';
+import { QuestionsComponent } from './mediastream/questions/questions.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { SocialmediaComponent } from './mediastream/socialmedia/socialmedia.comp
     SummaryComponent,
     TimelineComponent,
     TimelineItemComponent,
-    SocialmediaComponent
+    SocialmediaComponent,
+    QuestionsComponent
   ],
   imports: [
     BrowserModule,

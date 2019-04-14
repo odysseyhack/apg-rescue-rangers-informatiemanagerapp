@@ -1,0 +1,19 @@
+.topicMessages {
+    padding: 1em;
+    width: 90%;
+    background-color: rgb(253, 253, 253);
+    border-radius: 10px;
+    border: 1px solid #333;
+}
+.messagefeed, .imgfeed {
+    margin-top: 1em;
+}
+.messagefeed div, .imgfeed div {
+    margin-right: 2em;
+}
+input {
+    width: 20em;
+}
+.childImages {
+    max-width: 60px;
+}

@@ -1,3 +1,16 @@
-<p>
-  socialmedia works!
-</p>
+<div class="row">
+    <div class="col-lg-2"></div>
+    <input #triggerText placeholder="Zoek een incidenttype...">&nbsp;
+    <input #startDate class="col-lg-2" placeholder={{startingDate}}>
+    <input #finalDate class="col-lg-2" placeholder={{endDate}}>
+    <div class="btn btn-secondary" (click)="sendKeyword(triggerText.value)">Search</div>
+  </div>
+  
+  <div class="row text-center imgfeed offset-1">
+      <div *ngFor="let i of childImages"><img height="200px" src={{i}}></div>
+  </div>
+  
+  <div class="row offset-2 messagefeed">
+    <div class="col-lg-2 topicMessages text-center" *ngFor="let i of childTexts">{{ i }}</div>
+  </div>
+  <br>

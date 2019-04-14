@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Incident } from '../../model/eventdata';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { WeatherService } from 'src/app/service/weather.service';
+import { WeatherService } from 'src/app/mediastream/weather.service';
 import { zip } from 'rxjs';
 
 @Component({
@@ -10,7 +10,7 @@ import { zip } from 'rxjs';
   styleUrls: ['./summary.component.scss']
 })
 export class SummaryComponent implements OnInit {
-  title = "Casinobrand Groningen";
+  title = "Zware storm januari 2018, hoek van Holland";
 
   data = [{value: "GRIP-1", link: '../../../assets/img/fire.png'},
   {value: "20:55", link: '../../../assets/img/time.png'},
@@ -26,34 +26,6 @@ export class SummaryComponent implements OnInit {
 
   ngOnInit() {
     console.log("otehuoeu");
-
-    // this.weatherService.getWeatherData().subscribe(data => {
-    //   this.weather = JSON.parse(JSON.stringify(data));
-    //   console.log(this.weather.Key);
-    // });
-
-    this.weatherService.getTopicModels().subscribe(data => {
-      this.texts = JSON.parse(JSON.stringify(data));
-      console.log(this.texts[0]);
-    })
-    // this.weatherService.getWeatherData().subscribe(
-    //   data => { this.weather = data},
-    //   err => console.error(err),
-    //   () => console.log('done loading data')
-    // );
-
   }
 
 }
-
-
-
-
-
-// code if we used the class !!! 
-    // this.incident.severity = 3;
-    // this.incident.time = "20:22";
-    // this.incident.location = "Landhaven 30";
-    // this.incident.windspeed = 27;
-    // this.incident.winddirection = "N/NE";
-    // this.incident.humidity = 69;

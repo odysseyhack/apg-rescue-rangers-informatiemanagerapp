@@ -1,0 +1,17 @@
+<div class="container offset-1">
+    <div class="row questionRow" *ngFor="let i of vragen; let j = index">
+        <div class="col-lg-10">
+            <h3><strong>Vraag {{ j+1 }}: </strong> {{ i }}</h3>
+            <h6 style="color: #333;"> {{ antwoorden[j] }} personen hebben hier "ja" op geantwoord</h6>
+        </div>
+    </div>
+    <div *ngIf="isAsked">
+            <h3><strong>Nieuwe vraag: </strong> {{ question }}</h3>
+            <h6 style="color: #333;"> 0 personen hebben hier "ja" op geantwoord</h6>
+    </div>
+    <div class="row questionRow">
+        <div class="col-lg-10">
+            <input type="text" #box (keyup.enter)="update(box.value)">
+        </div>
+    </div>
+</div>
